@@ -2,12 +2,14 @@ import { useState } from "react";
 import API from './axios';
 import "./App.css";
 
+
+
 function App() {
     const [search, setSearch] = useState('');
 	const [data, setData] = useState('');
 	const [clickData, setClickData] = useState('');
 	const [pageCount, setPageCount] = useState(1);
-	const [refresh, setRefresh] = useState('');
+	const [refresh, setRefresh] = useState("");
 	const [loadButton, setLoadButton] = useState(false);
 
     const handleSubmit = (e) =>{
@@ -16,6 +18,7 @@ function App() {
 			setData(result.data)
         })
 	}
+	
 	
 	const handleLoadMore = () => {
 		setPageCount(pageCount+1);
